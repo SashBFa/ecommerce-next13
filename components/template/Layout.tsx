@@ -1,5 +1,6 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { Inter } from "@next/font/google";
+import Navigation from "./Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 const theme = createTheme({
@@ -8,9 +9,13 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      light: "#facc15",
-      main: "#fbbf24",
-      dark: "#f59e0b",
+      light: "#ca8a04",
+      main: "#a16207",
+      dark: "#854d0e",
+    },
+    secondary: {
+      light: "#fff",
+      main: "#fff",
     },
   },
 });
@@ -21,6 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="bg-dark min-h-screen text-white flex flex-col">
+          <Navigation />
           <div className="grow">{children}</div>
         </div>
       </ThemeProvider>

@@ -11,3 +11,7 @@
   text-decoration: none;
   text-size-adjust: 100%;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #a16207 !important;
+}

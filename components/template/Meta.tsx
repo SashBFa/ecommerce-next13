@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { company } from "../../data/company";
 
 type metaProps = {
   title?: string;
@@ -14,6 +15,6 @@ export default function Meta({ title, description }: metaProps) {
   );
 }
 Meta.defaultProps = {
-  title: "Seaki",
+  title: company.name,
   description: "E-commerce",
 };
